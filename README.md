@@ -1,3 +1,7 @@
+<img width="2400" height="1476" alt="Cityking Logo" src="https://github.com/user-attachments/assets/20034d09-12e0-4a21-b2d3-161de9ab32a5" />
+<img width="1984" height="2156" alt="Cityking Mirchi Powder Masala" src="https://github.com/user-attachments/assets/eb6e7535-8057-44e0-b700-79811a4e1d65" />
+
+
 # City King Brilliance
 
 Build a premium, production-ready, fully responsive FMCG spice brand website for:
