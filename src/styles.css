@@ -1,0 +1,367 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * City King Spices — Sah Food Industries design system.
+ * All colours are oklch tokens. Never hardcode colours in components.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --font-display: "Playfair Display", "Noto Serif Devanagari", "Rozha One", Georgia, serif;
+  --font-sans: "Inter", "Noto Sans Devanagari", system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+
+  --color-turmeric: var(--turmeric);
+  --color-turmeric-foreground: var(--turmeric-foreground);
+  --color-leaf: var(--leaf);
+  --color-leaf-foreground: var(--leaf-foreground);
+  --color-cream: var(--cream);
+  --color-cocoa: var(--cocoa);
+  --color-cocoa-foreground: var(--cocoa-foreground);
+  --color-gold: var(--gold);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* Cream #FFF8E8 */
+  --background: oklch(0.982 0.024 96);
+  /* Deep brown #3A2418 */
+  --foreground: oklch(0.28 0.043 48);
+  --card: oklch(0.995 0.008 96);
+  --card-foreground: oklch(0.28 0.043 48);
+  --popover: oklch(0.995 0.008 96);
+  --popover-foreground: oklch(0.28 0.043 48);
+
+  /* Spice red #B83224 */
+  --primary: oklch(0.503 0.166 30.5);
+  --primary-foreground: oklch(0.985 0.02 96);
+
+  --secondary: oklch(0.945 0.03 92);
+  --secondary-foreground: oklch(0.28 0.043 48);
+
+  --muted: oklch(0.948 0.024 92);
+  --muted-foreground: oklch(0.487 0.031 55);
+
+  /* Turmeric #E8B72F */
+  --accent: oklch(0.803 0.145 85.5);
+  --accent-foreground: oklch(0.24 0.04 48);
+
+  --destructive: oklch(0.503 0.166 30.5);
+  --destructive-foreground: oklch(0.985 0.02 96);
+
+  --border: oklch(0.9 0.024 82);
+  --input: oklch(0.9 0.024 82);
+  --ring: oklch(0.503 0.166 30.5);
+
+  --turmeric: oklch(0.803 0.145 85.5);
+  --turmeric-foreground: oklch(0.24 0.04 48);
+  /* Deep green #3D6B32 */
+  --leaf: oklch(0.484 0.093 141);
+  --leaf-foreground: oklch(0.985 0.02 96);
+  --cream: oklch(0.982 0.024 96);
+  --cocoa: oklch(0.234 0.036 48);
+  --cocoa-foreground: oklch(0.965 0.023 92);
+  --gold: oklch(0.78 0.098 82);
+
+  --chart-1: oklch(0.503 0.166 30.5);
+  --chart-2: oklch(0.803 0.145 85.5);
+  --chart-3: oklch(0.484 0.093 141);
+  --chart-4: oklch(0.28 0.043 48);
+  --chart-5: oklch(0.78 0.098 82);
+
+  --sidebar: oklch(0.982 0.024 96);
+  --sidebar-foreground: oklch(0.28 0.043 48);
+  --sidebar-primary: oklch(0.503 0.166 30.5);
+  --sidebar-primary-foreground: oklch(0.985 0.02 96);
+  --sidebar-accent: oklch(0.945 0.03 92);
+  --sidebar-accent-foreground: oklch(0.28 0.043 48);
+  --sidebar-border: oklch(0.9 0.024 82);
+  --sidebar-ring: oklch(0.503 0.166 30.5);
+
+  --shadow-card: 0 1px 2px oklch(0.28 0.043 48 / 0.04), 0 12px 32px -12px oklch(0.28 0.043 48 / 0.18);
+  --shadow-lift: 0 2px 4px oklch(0.28 0.043 48 / 0.06), 0 28px 50px -20px oklch(0.28 0.043 48 / 0.28);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.015em;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ring);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: var(--color-turmeric);
+    color: var(--color-turmeric-foreground);
+  }
+}
+
+@utility shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+@utility shadow-lift {
+  box-shadow: var(--shadow-lift);
+}
+
+@utility container-page {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 80rem;
+  padding-inline: 1.25rem;
+}
+
+@utility text-balance-tight {
+  text-wrap: balance;
+}
+
+/* Scroll reveal */
+@utility reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+@utility reveal-in {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes ck-float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1.5deg);
+  }
+}
+
+@keyframes ck-float-slow {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) rotate(-1deg) scale(1.02);
+  }
+}
+
+@keyframes ck-pulse-glow {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.06);
+  }
+}
+
+@keyframes ck-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes ck-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@utility animate-float {
+  animation: ck-float 6s ease-in-out infinite;
+}
+
+@utility animate-float-slow {
+  animation: ck-float-slow 8s ease-in-out infinite;
+}
+
+@utility animate-pulse-glow {
+  animation: ck-pulse-glow 5s ease-in-out infinite;
+}
+
+@utility animate-marquee {
+  animation: ck-marquee 28s linear infinite;
+}
+
+@utility gold-gradient {
+  background: linear-gradient(135deg, #f59e0b 0%, #eab308 50%, #d97706 100%);
+}
+
+@utility gold-text-gradient {
+  background: linear-gradient(135deg, #fde047 0%, #f59e0b 50%, #fde047 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@utility masonry-grid {
+  column-count: 1;
+  column-gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry-grid {
+    column-count: 3;
+  }
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+}
+
+@utility pb-mobile-bar {
+  padding-bottom: calc(4.5rem + env(safe-area-inset-bottom, 0px));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* =========================================================================
+   Devanagari (Hindi) Typography & Matra (मात्रा) Anti-Clipping Rules
+   ========================================================================= */
+:lang(hi),
+[data-lang="hi"] {
+  font-family: var(--font-sans);
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+}
+
+:lang(hi) h1,
+:lang(hi) h2,
+:lang(hi) h3,
+:lang(hi) h4,
+:lang(hi) h5,
+:lang(hi) .font-display,
+[data-lang="hi"] h1,
+[data-lang="hi"] h2,
+[data-lang="hi"] h3,
+[data-lang="hi"] h4,
+[data-lang="hi"] h5,
+[data-lang="hi"] .font-display {
+  font-family: var(--font-display);
+  line-height: 1.35 !important;
+  padding-top: 0.12em;
+  padding-bottom: 0.12em;
+  overflow: visible;
+}
+
+[data-lang="hi"] p,
+[data-lang="hi"] span,
+[data-lang="hi"] a,
+[data-lang="hi"] button,
+[data-lang="hi"] label {
+  line-height: 1.55;
+  overflow: visible;
+}
+
+/* Fix for inline Hindi badges so top matras like (ौ, ै, ो, े, ं) never get clipped */
+.hindi-text,
+[data-lang="hi"] .badge,
+span[lang="hi"] {
+  display: inline-block;
+  line-height: 1.45;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+}
+
