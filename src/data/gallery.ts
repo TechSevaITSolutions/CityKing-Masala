@@ -41,7 +41,7 @@ export const galleryItems: GalleryItem[] = [
   { id: "g7", src: tea, alt: "CTC tea granules beside a cup of Indian milk tea", category: "products" },
   { id: "g8", src: hero, alt: "Indian spices arranged in brass bowls", category: "brand" },
   { id: "g9", src: texture, alt: "Turmeric powder with spice dust in dramatic light", category: "brand" },
-  { id: "g10", src: whole, alt: "Whole Indian spices laid out in rows", category: "packaging" },
-  { id: "g11", src: kitchen, alt: "Spice powder being added to a curry in an Indian home kitchen", category: "company" },
+  { id: "g10", src: whole, alt: "Whole Indian spices laid out in rows", category: "brand" },
+  { id: "g11", src: kitchen, alt: "Spice powder being added to a curry in an Indian home kitchen", category: "food" },
   { id: "g12", src: food, alt: "Indian meal of paneer curry, dal, rice and roti", category: "food" },
 ];
