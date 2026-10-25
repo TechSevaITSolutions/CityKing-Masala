@@ -34,6 +34,7 @@ import { RegionalPresence } from "@/components/RegionalPresence";
 import { FaqSection } from "@/components/FaqSection";
 import { HeroProductShowcase } from "@/components/HeroProductShowcase";
 import { HeroBannerSlider } from "@/components/HeroBannerSlider";
+import { WhyChooseUsBannerSlider } from "@/components/WhyChooseUsBannerSlider";
 import { addToOrderBag } from "@/components/SmartOrderDrawer";
 
 // Image assets
@@ -279,6 +280,11 @@ function IndexPage() {
             </div>
           </div>
         </section>
+
+        {/* =========================================================================
+            WHY CHOOSE US ANIMATED BANNER SHOWCASE (AUTO-RUNNING 4-5 SECONDS CAROUSEL)
+           ========================================================================= */}
+        <WhyChooseUsBannerSlider />
 
         {/* =========================================================================
             3. INTERACTIVE KITCHEN GUIDE: "WHAT ARE YOU COOKING TODAY?"
