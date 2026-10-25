@@ -28,7 +28,7 @@ export function ServiceNetworkSection() {
              ========================================================================= */}
           <Link
             to="/network"
-            className="group relative block w-full rounded-3xl sm:rounded-4xl bg-gradient-to-br from-cocoa via-[#2A1610] to-cocoa text-cocoa-foreground p-8 sm:p-12 md:p-16 shadow-2xl border-2 border-accent/40 hover:border-accent transition-all duration-500 overflow-hidden hover:shadow-[0_20px_60px_rgba(184,50,36,0.35)] cursor-pointer"
+            className="group relative block w-full rounded-2xl sm:rounded-4xl bg-gradient-to-br from-cocoa via-[#2A1610] to-cocoa text-cocoa-foreground p-5 sm:p-10 md:p-16 shadow-2xl border-2 border-accent/40 hover:border-accent transition-all duration-500 overflow-hidden hover:shadow-[0_20px_60px_rgba(184,50,36,0.35)] cursor-pointer"
           >
             {/* Background Texture & Ambient Glows */}
             <div className="absolute inset-0 pointer-events-none z-0">

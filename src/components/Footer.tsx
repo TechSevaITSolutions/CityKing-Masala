@@ -8,7 +8,7 @@ export function Footer() {
   const { lang, t } = useLanguage();
 
   return (
-    <footer className="bg-cocoa text-cocoa-foreground border-t border-cocoa-foreground/10 pb-16 lg:pb-0">
+    <footer className="bg-cocoa text-cocoa-foreground border-t border-cocoa-foreground/10 pb-24 lg:pb-0">
       <div className="container-page grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4 lg:py-20">
         {/* Brand & Slogans Column */}
         <div className="lg:col-span-1 space-y-4">

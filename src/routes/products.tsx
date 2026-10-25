@@ -20,6 +20,28 @@ import { addToOrderBag } from "@/components/SmartOrderDrawer";
 import heroImg from "@/assets/texture-spice-dark.jpg";
 
 export const Route = createFileRoute("/products")({
+  head: () => ({
+    meta: [
+      { title: "Products & Spices Catalog | City King Spices | Sah Food Industries" },
+      {
+        name: "description",
+        content:
+          "Explore genuine spices, blended masalas and premium CTC tea by City King. Cold-ground Haldi, Mirchi, Dhaniya, Jeera, Kadai Paneer, Sabji Masala direct from Siliguri.",
+      },
+      {
+        name: "keywords",
+        content:
+          "City King Products, Haldi Powder, Mirchi Powder, Dhaniya Powder, Jeera Powder, Sabji Masala, Kadai Paneer Masala, CTC Chai Patti, Siliguri Spices Catalog",
+      },
+      { property: "og:title", content: "Products & Spices Catalog | City King Spices" },
+      {
+        property: "og:description",
+        content: "Authentic, cold-processed pure Indian spices and CTC tea by Sah Food Industries, Siliguri.",
+      },
+      { property: "og:url", content: "https://citykingspices.in/products" },
+    ],
+    links: [{ rel: "canonical", href: "https://citykingspices.in/products" }],
+  }),
   component: ProductsPage,
 });
 

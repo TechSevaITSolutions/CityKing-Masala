@@ -18,6 +18,28 @@ import wholeSpices from "@/assets/gallery-whole-spices.jpg";
 import citykingLogo from "@/assets/Cityking Logo.png";
 
 export const Route = createFileRoute("/about")({
+  head: () => ({
+    meta: [
+      { title: "About Us | Sah Food Industries & City King Spices | Siliguri" },
+      {
+        name: "description",
+        content:
+          "Learn about Sah Food Industries, founded by Mukesh Kumar Sah in Siliguri, Darjeeling. Dedicated to 100% pure, unadulterated cold-ground spices and traditional aroma.",
+      },
+      {
+        name: "keywords",
+        content:
+          "About City King Spices, Sah Food Industries Siliguri, Mukesh Kumar Sah, Darjeeling Spice Factory, Cold Ground Masala Story, Laye Swad me Bahar",
+      },
+      { property: "og:title", content: "About Us | Sah Food Industries & City King Spices" },
+      {
+        property: "og:description",
+        content: "The authentic story of Sah Food Industries and pure City King spices.",
+      },
+      { property: "og:url", content: "https://citykingspices.in/about" },
+    ],
+    links: [{ rel: "canonical", href: "https://citykingspices.in/about" }],
+  }),
   component: AboutPage,
 });
 

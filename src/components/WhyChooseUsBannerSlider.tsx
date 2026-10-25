@@ -175,7 +175,7 @@ export function WhyChooseUsBannerSlider() {
         {/* =========================================================================
             ANIMATED AUTO-RUNNING BANNER VIEWPORT (4-5 SECONDS TRANSITION)
            ========================================================================= */}
-        <div className="relative group w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-border/80 bg-stone-900 aspect-[16/9] sm:aspect-[2.2/1] lg:aspect-[2.48/1] max-h-[640px]">
+        <div className="relative group w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-border/80 bg-stone-900 aspect-[16/10] sm:aspect-[2.2/1] lg:aspect-[2.48/1] min-h-[220px] sm:min-h-[300px] max-h-[640px]">
           {WHY_SLIDES.map((slide, idx) => {
             const isActive = idx === currentIndex;
             return (
@@ -183,7 +183,7 @@ export function WhyChooseUsBannerSlider() {
                 key={slide.id}
                 aria-hidden={!isActive}
                 className={cn(
-                  "absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out",
+                  "absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out transform-gpu",
                   isActive
                     ? "opacity-100 z-10 pointer-events-auto"
                     : "opacity-0 z-0 pointer-events-none",
@@ -194,6 +194,7 @@ export function WhyChooseUsBannerSlider() {
                   src={slide.image}
                   alt=""
                   aria-hidden="true"
+                  decoding="async"
                   className="absolute inset-0 w-full h-full object-cover scale-110 blur-xl opacity-40 filter brightness-75"
                 />
 
@@ -205,11 +206,14 @@ export function WhyChooseUsBannerSlider() {
                 <img
                   src={slide.image}
                   alt={slide.alt}
+                  decoding="async"
                   className={cn(
                     "relative z-[2] w-full h-full object-contain object-center transition-transform duration-5000 ease-out",
                     isActive ? "scale-100 sm:scale-[1.015]" : "scale-105",
                   )}
                   loading={idx === 0 ? "eager" : "lazy"}
+                  // @ts-expect-error fetchpriority attribute
+                  fetchpriority={idx === 0 ? "high" : "auto"}
                 />
 
                 {/* Bottom Overlay Info Tag */}

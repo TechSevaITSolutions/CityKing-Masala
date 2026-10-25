@@ -18,6 +18,28 @@ import { Reveal } from "@/components/Reveal";
 import { site, telLink, telLink2, waLink, waMessages } from "@/data/site";
 
 export const Route = createFileRoute("/contact")({
+  head: () => ({
+    meta: [
+      { title: "Contact Us | Sah Food Industries | City King Spices Siliguri" },
+      {
+        name: "description",
+        content:
+          "Contact Sah Food Industries (City King Spices). Address: Ektiasal Eastern Bypass Road, Siliguri, Darjeeling – 734001, West Bengal. Phone: +91 98326 53731, +91 98004 92817.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Contact City King Spices, Sah Food Industries Siliguri Phone Number, Mukesh Kumar Sah, Ektiasal Eastern Bypass Road, Darjeeling Spices Factory",
+      },
+      { property: "og:title", content: "Contact Sah Food Industries | City King Spices" },
+      {
+        property: "og:description",
+        content: "Get in touch with Sah Food Industries, Siliguri for genuine spices and dealership.",
+      },
+      { property: "og:url", content: "https://citykingspices.in/contact" },
+    ],
+    links: [{ rel: "canonical", href: "https://citykingspices.in/contact" }],
+  }),
   component: ContactPage,
 });
 

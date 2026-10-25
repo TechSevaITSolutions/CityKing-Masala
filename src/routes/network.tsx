@@ -25,6 +25,28 @@ import { useLanguage } from "@/context/LanguageContext";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/network")({
+  head: () => ({
+    meta: [
+      { title: "Service Network | West Bengal & 21 North Bihar Districts | City King Spices" },
+      {
+        name: "description",
+        content:
+          "City King Spices retail & distributor network across Siliguri, Darjeeling (WB) and all 21 districts of North Bihar: Muzaffarpur, Darbhanga, Champaran, Purnia, Samastipur, etc.",
+      },
+      {
+        name: "keywords",
+        content:
+          "City King Service Network, Masala Distributor North Bihar, Spices Siliguri Darjeeling, Kirana Supply Muzaffarpur, Darbhanga Masala Mandi, Purnia Spice Wholesale",
+      },
+      { property: "og:title", content: "Our Service Network | City King Spices" },
+      {
+        property: "og:description",
+        content: "Serving 22 districts across West Bengal and entire North Bihar with factory-fresh spices.",
+      },
+      { property: "og:url", content: "https://citykingspices.in/network" },
+    ],
+    links: [{ rel: "canonical", href: "https://citykingspices.in/network" }],
+  }),
   component: NetworkPage,
 });
 

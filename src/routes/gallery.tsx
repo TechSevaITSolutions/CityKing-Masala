@@ -8,6 +8,28 @@ import { galleryCategories, galleryItems, type GalleryCategory, type GalleryItem
 import heroImg from "@/assets/hero-spices.jpg";
 
 export const Route = createFileRoute("/gallery")({
+  head: () => ({
+    meta: [
+      { title: "Photo Gallery & Factory Moments | City King Spices" },
+      {
+        name: "description",
+        content:
+          "Explore City King Spices visual gallery: whole spices, modern hygienic packaging, and real culinary moments from Sah Food Industries, Siliguri.",
+      },
+      {
+        name: "keywords",
+        content:
+          "City King Gallery, Spices Photos, Packaging Photos, Sah Food Industries Siliguri Factory, Whole Spices Darjeeling",
+      },
+      { property: "og:title", content: "Visual Gallery | City King Spices" },
+      {
+        property: "og:description",
+        content: "Glimpse our unadulterated whole spices, ground powders, and factory packaging.",
+      },
+      { property: "og:url", content: "https://citykingspices.in/gallery" },
+    ],
+    links: [{ rel: "canonical", href: "https://citykingspices.in/gallery" }],
+  }),
   component: GalleryPage,
 });
 

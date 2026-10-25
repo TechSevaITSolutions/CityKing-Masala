@@ -1,15 +1,41 @@
 import { site } from "@/data/site";
 import { products } from "@/data/products";
 import { faqs } from "@/components/FaqSection";
+import { serviceDistricts } from "@/data/network";
 
 export function SeoStructuredData() {
+  const servedDistricts = serviceDistricts.map((d) => `${d.name}, ${d.state}`);
+
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: site.company,
-    alternateName: ["City King", "City King Masala", "City King Spices", "Sah Food Industries Siliguri"],
+    alternateName: [
+      "City King",
+      "City King Masala",
+      "City King Spices",
+      "Sah Food Industries Siliguri",
+      "सिटी किंग मसाले",
+    ],
     url: "https://citykingspices.in",
+    logo: "https://citykingspices.in/assets/Cityking%20Logo.png",
     telephone: [site.phonePrimary, site.phoneSecondary],
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: site.phonePrimary,
+        contactType: "customer service",
+        areaServed: ["IN"],
+        availableLanguage: ["Hindi", "English", "Bengali", "Bhojpuri", "Maithili"],
+      },
+      {
+        "@type": "ContactPoint",
+        telephone: site.phoneSecondary,
+        contactType: "sales & dealership",
+        areaServed: ["IN"],
+        availableLanguage: ["Hindi", "English", "Bengali", "Bhojpuri", "Maithili"],
+      },
+    ],
     founder: {
       "@type": "Person",
       name: site.owner,
@@ -23,10 +49,8 @@ export function SeoStructuredData() {
       postalCode: site.pincode,
       addressCountry: "IN",
     },
-    sameAs: [
-      site.social.instagram,
-      site.social.facebook,
-    ].filter(Boolean),
+    areaServed: servedDistricts,
+    sameAs: [site.social.instagram, site.social.facebook].filter(Boolean),
     slogan: site.tagline,
   };
 
@@ -37,6 +61,8 @@ export function SeoStructuredData() {
     image: "https://citykingspices.in/assets/hero-spices.jpg",
     telephone: [site.phonePrimary, site.phoneSecondary],
     priceRange: "₹₹",
+    currenciesAccepted: "INR",
+    paymentAccepted: "Cash, UPI, Bank Transfer",
     address: {
       "@type": "PostalAddress",
       streetAddress: site.streetAddress,
@@ -52,16 +78,23 @@ export function SeoStructuredData() {
     },
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-      ],
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
       opens: "09:00",
       closes: "20:00",
+    },
+    areaServed: servedDistricts,
+  };
+
+  const webSiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "City King Spices",
+    alternateName: "Sah Food Industries Siliguri",
+    url: "https://citykingspices.in",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://citykingspices.in/products?search={search_term_string}",
+      "query-input": "required name=search_term_string",
     },
   };
 
@@ -88,6 +121,7 @@ export function SeoStructuredData() {
           "@type": "Offer",
           priceCurrency: "INR",
           availability: "https://schema.org/InStock",
+          url: "https://citykingspices.in/products",
         },
       },
     })),
@@ -115,6 +149,10 @@ export function SeoStructuredData() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
       />
       <script
         type="application/ld+json"

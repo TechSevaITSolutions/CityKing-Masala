@@ -18,6 +18,28 @@ import textureImg from "@/assets/texture-spice-dark.jpg";
 import citykingLogo from "@/assets/Cityking Logo.png";
 
 export const Route = createFileRoute("/brand")({
+  head: () => ({
+    meta: [
+      { title: "Brand Philosophy & Purity Promise | City King Spices" },
+      {
+        name: "description",
+        content:
+          "Discover the City King brand promise — “Laye Swad me Bahar”. Zero artificial dyes, zero starch fillers, cold processing preserving natural volatile oils and authentic Indian flavor.",
+      },
+      {
+        name: "keywords",
+        content:
+          "City King Brand, Laye Swad me Bahar, Spice Purity Standard, Cold Grinding Technology, No Artificial Colors, Authentic Indian Spices",
+      },
+      { property: "og:title", content: "Brand Philosophy & Purity | City King Spices" },
+      {
+        property: "og:description",
+        content: "Our commitment to unadulterated spices for every Indian kitchen.",
+      },
+      { property: "og:url", content: "https://citykingspices.in/brand" },
+    ],
+    links: [{ rel: "canonical", href: "https://citykingspices.in/brand" }],
+  }),
   component: BrandPage,
 });
 

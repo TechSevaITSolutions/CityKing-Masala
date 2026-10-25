@@ -19,6 +19,28 @@ import { Reveal } from "@/components/Reveal";
 import { site, telLink, waLink, waMessages } from "@/data/site";
 
 export const Route = createFileRoute("/distributor")({
+  head: () => ({
+    meta: [
+      { title: "Distributor & Dealership Enquiry | City King Spices | Sah Food Industries" },
+      {
+        name: "description",
+        content:
+          "Partner with City King Spices. Apply for dealership, stockist, or retail wholesale opportunities across West Bengal, North Bihar, and East India. Direct factory dispatch from Siliguri.",
+      },
+      {
+        name: "keywords",
+        content:
+          "City King Dealership, Spices Distributor Enquiry, Masala Wholesale Margin, FMCG Distributorship West Bengal Bihar, Sah Food Industries Dealership",
+      },
+      { property: "og:title", content: "Dealership & Distributor Enquiry | City King Spices" },
+      {
+        property: "og:description",
+        content: "Lucrative FMCG dealership and wholesale opportunities for City King Spices.",
+      },
+      { property: "og:url", content: "https://citykingspices.in/distributor" },
+    ],
+    links: [{ rel: "canonical", href: "https://citykingspices.in/distributor" }],
+  }),
   component: DistributorPage,
 });
 

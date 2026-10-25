@@ -135,6 +135,12 @@
   html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Rapid mobile touch response without 300ms tap delay */
+  a, button, input, select, textarea {
+    touch-action: manipulation;
   }
 
   body {
@@ -176,7 +182,19 @@
   width: 100%;
   margin-inline: auto;
   max-width: 80rem;
-  padding-inline: 1.25rem;
+  padding-inline: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-page {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-page {
+    padding-inline: 2rem;
+  }
 }
 
 @utility text-balance-tight {
