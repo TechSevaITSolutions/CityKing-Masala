@@ -35,6 +35,7 @@ import { MarginCalculator } from "@/components/MarginCalculator";
 import { RegionalPresence } from "@/components/RegionalPresence";
 import { FaqSection } from "@/components/FaqSection";
 import { HeroProductShowcase } from "@/components/HeroProductShowcase";
+import { HeroBannerSlider } from "@/components/HeroBannerSlider";
 import { addToOrderBag } from "@/components/SmartOrderDrawer";
 
 // Image assets
@@ -60,9 +61,17 @@ function IndexPage() {
 
       <main className="flex-1">
         {/* =========================================================================
-            1. HERO SECTION — CINEMATIC ULTRA-PREMIUM HERO (WOW FACTOR)
+            1. TOP HERO SECTION — CINEMATIC 5-BANNER ADVERTISEMENT ROTATING BILLBOARD
            ========================================================================= */}
-        <section className="relative min-h-[92vh] flex items-center justify-center pt-24 pb-16 overflow-hidden bg-cocoa text-cocoa-foreground">
+        <HeroBannerSlider />
+
+        {/* =========================================================================
+            2. SIGNATURE 3D PRODUCT SHOWCASE & BRAND NARRATIVE (MOVED TO SECTION 2)
+           ========================================================================= */}
+        <section
+          id="interactive-showcase"
+          className="relative min-h-[85vh] flex items-center justify-center pt-16 sm:pt-20 pb-16 overflow-hidden bg-cocoa text-cocoa-foreground border-t border-white/10"
+        >
           {/* Layered Background with atmospheric spice imagery */}
           <div className="absolute inset-0 z-0 pointer-events-none">
             <img
