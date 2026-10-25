@@ -30,8 +30,6 @@ import { CookingGuide } from "@/components/CookingGuide";
 import { PurityExplorer } from "@/components/PurityExplorer";
 import { PurityWaterTest } from "@/components/PurityWaterTest";
 import { RegionalTadkaMatcher } from "@/components/RegionalTadkaMatcher";
-import { ShelfLifeCalculator } from "@/components/ShelfLifeCalculator";
-import { MarginCalculator } from "@/components/MarginCalculator";
 import { RegionalPresence } from "@/components/RegionalPresence";
 import { FaqSection } from "@/components/FaqSection";
 import { HeroProductShowcase } from "@/components/HeroProductShowcase";
@@ -554,16 +552,6 @@ function IndexPage() {
             </div>
           </div>
         </section>
-
-        {/* =========================================================================
-            10. SPICE FRESHNESS & SHELF-LIFE CALCULATOR
-           ========================================================================= */}
-        <ShelfLifeCalculator />
-
-        {/* =========================================================================
-            11. DISTRIBUTOR PROFIT & VOLUME ESTIMATOR
-           ========================================================================= */}
-        <MarginCalculator />
 
         {/* =========================================================================
             12. REGIONAL PRESENCE & LOGISTICS HUB
