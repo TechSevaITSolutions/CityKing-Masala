@@ -42,9 +42,9 @@ export const translations: Record<Language, Record<string, string>> = {
     "metric.factory": "Siliguri Factory Hub",
 
     // Section Titles
-    "why.tag": "The Sah Food Standard",
-    "why.title": "Why Choose City King Spices?",
-    "why.sub": "Pure, aromatic, and dependable spices made for everyday Indian cooking.",
+    "why.tag": "The Sah Food Commitment • Siliguri Hub",
+    "why.title": "Why Millions Trust City King in Every Meal",
+    "why.sub": "Pure, cold-processed spices with zero adulteration — releasing that unforgettable homestyle aroma, rich natural colour, and pure taste that brings families together.",
 
     "products.tag": "Our Essential Range",
     "products.title": "Explore Our Products",
@@ -100,9 +100,9 @@ export const translations: Record<Language, Record<string, string>> = {
     "metric.factory": "सिलीगुड़ी फैक्ट्री हब",
 
     // Section Titles
-    "why.tag": "साह फूड्स की गुणवत्ता",
-    "why.title": "सिटी किंग मसाले ही क्यों चुनें?",
-    "why.sub": "हर रोज़ के भारतीय भोजन के लिए शुद्ध, सुगंधित और भरोसेमंद मसाले।",
+    "why.tag": "साह फूड इंडस्ट्रीज का संकल्प • सिलीगुड़ी",
+    "why.title": "हर भारतीय रसोई की पहली पसंद — सिटी किंग मसाले",
+    "why.sub": "बिना किसी मिलावट, कृत्रिम रंग या स्टार्च के तैयार शुद्ध मसाले — जो हर निवाले में घोलें असली स्वाद, प्राकृतिक रंग और मनभावन महक।",
 
     "products.tag": "हमारी खास उत्पाद श्रृंखला",
     "products.title": "सिटी किंग मसाले और चाय",

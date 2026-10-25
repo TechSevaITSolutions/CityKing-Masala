@@ -232,48 +232,87 @@ function IndexPage() {
               {[
                 {
                   icon: Flame,
-                  title: lang === "hi" ? "प्रामाणिक स्वाद व सुगंध" : "Authentic Flavour",
+                  badge: lang === "hi" ? "🌿 100% असली मसाले" : "🌿 100% Pure Spices",
+                  title: lang === "hi" ? "असली सुगंध व प्राकृतिक रंग" : "Authentic Aroma & Natural Colour",
                   desc:
                     lang === "hi"
-                      ? "पारंपरिक भारतीय व्यंजनों के लिए विशेष, जो हर पकवान में असली सुगंध और गहरा प्राकृतिक रंग घोलते हैं।"
-                      : "Spices and masalas designed for everyday Indian cooking, releasing authentic aroma and deep colour in every dish.",
+                      ? "बिना किसी कृत्रिम रंग, स्टार्च या मिलावट के तैयार। धीमी गति से पिसे हुए मसाले जो तेलों की ताजगी सुरक्षित रखते हैं — बस आधा चम्मच ही आपकी दाल, तरी और तड़के में असली सुगंध और प्राकृतिक रंग भर देता है।"
+                      : "Never adulterated with artificial dyes or starch. Cold-ground at gentle speeds to preserve volatile essential oils — so a single pinch releases that unforgettable homestyle fragrance and deep rich hue.",
+                  highlight: lang === "hi" ? "“लाये स्वाद में बहार”" : "“Laye Swad me Bahar”",
+                  accentColor: "group-hover:border-amber-500/50",
+                  iconBg: "bg-amber-500/10 text-amber-600 group-hover:bg-amber-500 group-hover:text-white",
+                },
+                {
+                  icon: ShieldCheck,
+                  badge: lang === "hi" ? "🛡️ परिवार की सेहत का भरोसा" : "🛡️ Family Health First",
+                  title: lang === "hi" ? "हर निवाले में शुद्धता और सुरक्षा" : "Purity Tested for Family Health",
+                  desc:
+                    lang === "hi"
+                      ? "सिलीगुड़ी कारखाने में आधुनिक स्वच्छता व कड़े मानकों से परखे गए मसाले — शून्य चॉक पाउडर, शून्य केमिकल और शून्य अशुद्धियां। अपने बच्चों और परिवार को परोसें पूरी तरह सुरक्षित, पौष्टिक और शुद्ध भोजन।"
+                      : "Every batch is rigorously cleaned and inspected at our Siliguri hub — zero chalk powder, zero synthetic colors, zero harmful fillers. What you serve your family is 100% wholesome, clean and dependable.",
+                  highlight: lang === "hi" ? "“शुद्ध मसाले यानी सिटी किंग मसाले”" : "“Pure Spices • Pure Health”",
+                  accentColor: "group-hover:border-primary/50",
+                  iconBg: "bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground",
                 },
                 {
                   icon: UtensilsCrossed,
-                  title: lang === "hi" ? "रोज़मर्रा की जरूरतें" : "Everyday Essentials",
+                  badge: lang === "hi" ? "👑 संपूर्ण रसोई श्रृंखला" : "👑 Complete Kitchen Range",
+                  title: lang === "hi" ? "दैनिक दाल से लेकर खास दावतों तक" : "From Daily Dal to Royal Feasts",
                   desc:
                     lang === "hi"
-                      ? "दाल, सूखी तरकारी, करी और खास दावतों के लिए सर्वोत्तम ताज़ा मसाले।"
-                      : "Products suitable for regular kitchen use — from daily dals and vegetables to festive special curries.",
+                      ? "एक ही भरोसेमंद ब्रांड के अंतर्गत संपूर्ण रसोई का सामान: रोज़मर्रा के पिसे मसाले (हल्दी, मिर्ची, धनिया, जीरा), दावतों के लिए शाही ब्लेंड्स (कढ़ाई पनीर, सब्जी मसाला) और ताजगी से भरपूर कड़क सीटीसी चाय।"
+                      : "Your complete pantry under one trusted name: everyday staple powders (Haldi, Mirchi, Dhaniya, Jeera), celebratory master blends (Kadai Paneer, Sabji Masala), and energizing Darjeeling-terroir CTC Tea.",
+                  highlight: lang === "hi" ? "9+ उत्पाद (पाउच व जार पैक)" : "9+ Branded Packs Available",
+                  accentColor: "group-hover:border-leaf/50",
+                  iconBg: "bg-leaf/10 text-leaf group-hover:bg-leaf group-hover:text-white",
                 },
                 {
-                  icon: PackageCheck,
-                  title: lang === "hi" ? "9+ उत्पाद श्रृंखला" : "Product Variety",
+                  icon: Truck,
+                  badge: lang === "hi" ? "🚚 सिलीगुड़ी फैक्टरी से सीधी आपूर्ति" : "🚚 Direct From Siliguri Hub",
+                  title: lang === "hi" ? "कारखाने से सीधी ताजगी व सर्वश्रेष्ठ मार्जिन" : "Factory-Fresh Batches & Fast Dispatch",
                   desc:
                     lang === "hi"
-                      ? "शुद्ध पिसे मसाले, स्वादिष्ट सब्जी व पनीर मसाले और कड़क सीटीसी चाय।"
-                      : "A growing range of pure spices, blended masalas and fine CTC tea to meet every household need.",
-                },
-                {
-                  icon: MapPin,
-                  title: lang === "hi" ? "सिलीगुड़ी में निर्मित" : "Siliguri Based",
-                  desc:
-                    lang === "hi"
-                      ? "साह फूड इंडस्ट्रीज, सिलीगुड़ी (पश्चिम बंगाल – 734001) से पूरे उत्तर बंगाल व देश भर में आपूर्ति।"
-                      : "Sah Food Industries is based in Siliguri, West Bengal – 734001, serving North Bengal and nationwide.",
+                      ? "साह फूड इंडस्ट्रीज, सिलीगुड़ी (पश्चिम बंगाल – 734001) में एम. साह की देखरेख में निर्मित। बिना लंबे गोदाम ठहराव के सीधे ताजा बैच डिलीवर होते हैं — जिससे मिले अधिकतम खुशबू और व्यापारियों को सबसे बढ़िया मुनाफा।"
+                      : "Manufactured by Sah Food Industries in Siliguri, Darjeeling (734001) under owner M Sah’s personal supervision. Delivered fresh with no long warehouse decay — ensuring peak aroma for homes and superior margins for partners.",
+                  highlight: lang === "hi" ? "सिलीगुड़ी पिन: 734001 • त्वरित डिलीवरी" : "Direct Siliguri Dispatch (734001)",
+                  accentColor: "group-hover:border-primary/50",
+                  iconBg: "bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground",
                 },
               ].map((feat, idx) => (
                 <Reveal key={feat.title} delay={idx * 80}>
-                  <div className="h-full p-6 sm:p-7 rounded-2xl bg-background border border-border hover:border-primary/40 hover:shadow-card transition-all duration-300 group">
-                    <div className="size-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                      <feat.icon className="size-6" />
+                  <div className={`h-full flex flex-col justify-between p-6 sm:p-7 rounded-2xl bg-background border border-border/80 ${feat.accentColor} hover:shadow-xl transition-all duration-300 group hover:-translate-y-1 relative overflow-hidden`}>
+                    {/* Top ambient colored accent line */}
+                    <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+
+                    <div>
+                      {/* Micro Badge */}
+                      <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-muted text-[11px] font-semibold text-muted-foreground mb-4">
+                        <span>{feat.badge}</span>
+                      </div>
+
+                      {/* Icon */}
+                      <div className={`size-12 rounded-xl flex items-center justify-center mb-4 transition-all duration-300 ${feat.iconBg}`}>
+                        <feat.icon className="size-6 transition-transform group-hover:scale-110" />
+                      </div>
+
+                      {/* Title */}
+                      <h3 className="font-display font-bold text-lg text-foreground mb-2.5 leading-snug">
+                        {feat.title}
+                      </h3>
+
+                      {/* Description */}
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                        {feat.desc}
+                      </p>
                     </div>
-                    <h3 className="font-display font-bold text-lg text-foreground mb-2">
-                      {feat.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {feat.desc}
-                    </p>
+
+                    {/* Bottom Slogan / Feature Pill */}
+                    <div className="pt-4 mt-4 border-t border-border/60 flex items-center justify-between text-xs">
+                      <span className="font-semibold text-primary/90 font-hindi">
+                        {feat.highlight}
+                      </span>
+                      <Sparkles className="size-3 text-amber-500 opacity-60 group-hover:opacity-100 transition-opacity" />
+                    </div>
                   </div>
                 </Reveal>
               ))}
