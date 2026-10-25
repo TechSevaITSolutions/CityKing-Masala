@@ -14,7 +14,7 @@ export const translations: Record<Language, Record<string, string>> = {
     // Nav
     "nav.home": "Home",
     "nav.products": "Products",
-    "nav.network": "Service Network",
+    "nav.network": "Services",
     "nav.brand": "Brand",
     "nav.about": "About Us",
     "nav.distributor": "Distributor",
@@ -73,7 +73,7 @@ export const translations: Record<Language, Record<string, string>> = {
     // Nav
     "nav.home": "मुख्य पृष्ठ",
     "nav.products": "उत्पाद श्रृंखला",
-    "nav.network": "सेवा नेटवर्क",
+    "nav.network": "सेवाएं",
     "nav.brand": "ब्रांड पहचान",
     "nav.about": "हमारे बारे में",
     "nav.distributor": "डीलरशिप",

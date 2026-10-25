@@ -15,9 +15,7 @@ export function Navbar() {
     { to: "/", label: t("nav.home") },
     { to: "/products", label: t("nav.products") },
     { to: "/network", label: t("nav.network") },
-    { to: "/brand", label: t("nav.brand") },
     { to: "/about", label: t("nav.about") },
-    { to: "/distributor", label: t("nav.distributor") },
     { to: "/gallery", label: t("nav.gallery") },
     { to: "/contact", label: t("nav.contact") },
   ];
@@ -103,14 +101,7 @@ export function Navbar() {
             </button>
           </div>
 
-          <a
-            href={telLink}
-            title={`Call Sah Food Industries: ${site.phonePrimary} / ${site.phoneSecondary}`}
-            className="inline-flex items-center gap-1.5 rounded-full border border-border px-3.5 py-1.5 text-xs xl:text-sm font-medium transition-colors hover:border-primary hover:text-primary"
-          >
-            <Phone className="size-3.5" aria-hidden="true" />
-            <span>{site.phonePrimary}</span>
-          </a>
+          
 
           {/* Social Media Header Icons */}
           <div className="flex items-center gap-1 border-l border-border/70 pl-2">
