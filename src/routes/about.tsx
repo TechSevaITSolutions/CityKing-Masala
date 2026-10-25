@@ -65,7 +65,7 @@ function AboutPage() {
 
               <Reveal delay={100}>
                 <p className="text-muted-foreground leading-relaxed">
-                  <strong>{site.company}</strong> was founded by <strong>{site.owner}</strong> in <strong>{site.city}, {site.district} ({site.state})</strong> with a visionary purpose: to bring uncompromised spice purity to every Indian family's dining table.
+                  <strong>{site.company}</strong> was founded by <strong>{site.owner}</strong> ({site.founderTitle}) at <strong>{site.streetAddress}, {site.city}, {site.district} (Pin {site.pincode}, {site.state})</strong> with a visionary purpose: to bring uncompromised spice purity to every Indian family's dining table.
                 </p>
               </Reveal>
 

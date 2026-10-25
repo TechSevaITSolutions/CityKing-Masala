@@ -81,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "City King Spices by Sah Food Industries, Siliguri, Darjeeling (WB – 734001). 100% pure turmeric, chilli, coriander, cumin, blended masalas, and CTC tea. Laye Swad me Bahar. Contact +91 98004 92817.",
+          "City King Spices by Sah Food Industries, Ektiasal Eastern Bypass Road, Siliguri, Darjeeling (WB – 734001). Founded by Mukesh Kumar Sah. 100% pure spices, blended masalas, and CTC tea. Laye Swad me Bahar. Contact +91 98326 53731, +91 98004 92817.",
       },
       {
         name: "keywords",

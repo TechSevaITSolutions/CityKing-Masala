@@ -1,8 +1,8 @@
 import { Link } from "@tanstack/react-router";
-import { Globe, Menu, MessageCircle, Phone, X } from "lucide-react";
+import { Facebook, Globe, Instagram, Menu, MessageCircle, Phone, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { BrandMark } from "@/components/BrandMark";
-import { site, telLink, waLink, waMessages } from "@/data/site";
+import { site, telLink, telLink2, waLink, waMessages } from "@/data/site";
 import { useLanguage } from "@/context/LanguageContext";
 import { cn } from "@/lib/utils";
 
@@ -14,6 +14,7 @@ export function Navbar() {
   const navItems = [
     { to: "/", label: t("nav.home") },
     { to: "/products", label: t("nav.products") },
+    { to: "/network", label: t("nav.network") },
     { to: "/brand", label: t("nav.brand") },
     { to: "/about", label: t("nav.about") },
     { to: "/distributor", label: t("nav.distributor") },
@@ -104,11 +105,40 @@ export function Navbar() {
 
           <a
             href={telLink}
+            title={`Call Sah Food Industries: ${site.phonePrimary} / ${site.phoneSecondary}`}
             className="inline-flex items-center gap-1.5 rounded-full border border-border px-3.5 py-1.5 text-xs xl:text-sm font-medium transition-colors hover:border-primary hover:text-primary"
           >
             <Phone className="size-3.5" aria-hidden="true" />
-            <span>{site.phoneDisplay}</span>
+            <span>{site.phonePrimary}</span>
           </a>
+
+          {/* Social Media Header Icons */}
+          <div className="flex items-center gap-1 border-l border-border/70 pl-2">
+            {site.social.instagram && (
+              <a
+                href={site.social.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="size-8 rounded-full flex items-center justify-center text-muted-foreground hover:text-rose-600 hover:bg-rose-500/10 transition-colors"
+                aria-label="City King Instagram Page"
+                title="Follow City King on Instagram"
+              >
+                <Instagram className="size-4" />
+              </a>
+            )}
+            {site.social.facebook && (
+              <a
+                href={site.social.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="size-8 rounded-full flex items-center justify-center text-muted-foreground hover:text-blue-600 hover:bg-blue-500/10 transition-colors"
+                aria-label="City King Facebook Page"
+                title="Follow City King on Facebook"
+              >
+                <Facebook className="size-4" />
+              </a>
+            )}
+          </div>
 
           <Link
             to="/distributor"

@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import {
+  Facebook,
+  Instagram,
   Mail,
   MapPin,
   MessageCircle,
@@ -8,11 +10,12 @@ import {
   Send,
   Sparkles,
   User,
+  UserCheck,
 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
-import { site, telLink, waLink, waMessages } from "@/data/site";
+import { site, telLink, telLink2, waLink, waMessages } from "@/data/site";
 
 export const Route = createFileRoute("/contact")({
   component: ContactPage,
@@ -73,33 +76,60 @@ function ContactPage() {
 
               <div className="space-y-4">
                 <Reveal delay={100}>
-                  <div className="p-5 rounded-2xl bg-card border border-border flex items-start gap-4">
+                  <div className="p-5 rounded-2xl bg-card border border-border flex items-start gap-4 shadow-xs">
                     <div className="size-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
                       <MapPin className="size-5" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-sm text-foreground">Registered Office / Factory</h4>
-                      <p className="text-sm text-muted-foreground mt-1">
-                        <strong>{site.company}</strong>
+                      <h4 className="font-bold text-sm text-foreground">Registered Office & Factory</h4>
+                      <p className="text-xs sm:text-sm text-muted-foreground mt-1 leading-relaxed">
+                        <strong className="text-foreground">{site.company}</strong>
                         <br />
-                        {site.addressLine}
+                        {site.streetAddress}
+                        <br />
+                        {site.city}, {site.district} – Pin {site.pincode}, {site.state}
                       </p>
                     </div>
                   </div>
                 </Reveal>
 
-                <Reveal delay={150}>
-                  <div className="p-5 rounded-2xl bg-card border border-border flex items-start gap-4">
+                <Reveal delay={130}>
+                  <div className="p-5 rounded-2xl bg-card border border-border flex items-start gap-4 shadow-xs">
+                    <div className="size-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center shrink-0">
+                      <UserCheck className="size-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-sm text-foreground">Founder & Leadership</h4>
+                      <p className="text-sm font-semibold text-foreground mt-1">
+                        {site.owner}
+                      </p>
+                      <p className="text-xs text-muted-foreground">
+                        {site.founderTitle}
+                      </p>
+                    </div>
+                  </div>
+                </Reveal>
+
+                <Reveal delay={160}>
+                  <div className="p-5 rounded-2xl bg-card border border-border flex items-start gap-4 shadow-xs">
                     <div className="size-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
                       <Phone className="size-5" />
                     </div>
-                    <div>
-                      <h4 className="font-bold text-sm text-foreground">Phone & WhatsApp</h4>
-                      <div className="mt-1 space-y-1">
-                        <a href={telLink} className="block text-sm text-primary font-medium hover:underline">
-                          {site.phoneDisplay}
-                        </a>
-                        <p className="text-xs text-muted-foreground">Owner: {site.owner}</p>
+                    <div className="w-full">
+                      <h4 className="font-bold text-sm text-foreground">Direct Contact Numbers</h4>
+                      <div className="mt-2 space-y-1.5 text-xs sm:text-sm">
+                        <div className="flex items-center justify-between">
+                          <a href={telLink} className="text-primary font-semibold hover:underline">
+                            {site.phonePrimary}
+                          </a>
+                          <span className="text-[11px] text-muted-foreground bg-muted px-2 py-0.5 rounded">Primary</span>
+                        </div>
+                        <div className="flex items-center justify-between">
+                          <a href={telLink2} className="text-foreground/90 font-medium hover:underline">
+                            {site.phoneSecondary}
+                          </a>
+                          <span className="text-[11px] text-muted-foreground bg-muted px-2 py-0.5 rounded">Sales / WhatsApp</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -110,21 +140,54 @@ function ContactPage() {
                     href={waLink(waMessages.general)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-5 rounded-2xl bg-leaf/10 border border-leaf/30 flex items-center justify-between gap-4 text-leaf hover:bg-leaf/20 transition-colors group"
+                    className="p-5 rounded-2xl bg-leaf/10 border border-leaf/30 flex items-center justify-between gap-4 text-leaf hover:bg-leaf/20 transition-colors group shadow-xs"
                   >
                     <div className="flex items-center gap-3">
                       <div className="size-10 rounded-xl bg-leaf text-leaf-foreground flex items-center justify-center shrink-0">
                         <MessageCircle className="size-5" />
                       </div>
                       <div>
-                        <h4 className="font-bold text-sm text-foreground">Instant WhatsApp Chat</h4>
-                        <p className="text-xs text-muted-foreground">Direct response from our team</p>
+                        <h4 className="font-bold text-sm text-foreground">Instant WhatsApp Order Desk</h4>
+                        <p className="text-xs text-muted-foreground">Direct response: {site.phonePrimary}</p>
                       </div>
                     </div>
                     <span className="text-xs font-bold underline group-hover:translate-x-1 transition-transform">
-                      Message Now →
+                      Chat Now →
                     </span>
                   </a>
+                </Reveal>
+
+                {/* Social Connect Box */}
+                <Reveal delay={240}>
+                  <div className="p-5 rounded-2xl bg-muted/60 border border-border space-y-3">
+                    <h4 className="font-bold text-xs uppercase tracking-wider text-muted-foreground">
+                      Official Social Media Channels
+                    </h4>
+                    <div className="flex items-center gap-3">
+                      {site.social.instagram && (
+                        <a
+                          href={site.social.instagram}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl bg-gradient-to-r from-amber-600 via-rose-600 to-purple-600 text-white text-xs font-semibold shadow-xs hover:opacity-95 transition-transform hover:scale-[1.02]"
+                        >
+                          <Instagram className="size-4" />
+                          <span>Instagram</span>
+                        </a>
+                      )}
+                      {site.social.facebook && (
+                        <a
+                          href={site.social.facebook}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 inline-flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl bg-blue-600 text-white text-xs font-semibold shadow-xs hover:bg-blue-700 transition-transform hover:scale-[1.02]"
+                        >
+                          <Facebook className="size-4" />
+                          <span>Facebook</span>
+                        </a>
+                      )}
+                    </div>
+                  </div>
                 </Reveal>
               </div>
             </div>

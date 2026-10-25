@@ -15,6 +15,7 @@ import { Route as BrandRouteImport } from './routes/brand'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as DistributorRouteImport } from './routes/distributor'
 import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as NetworkRouteImport } from './routes/network'
 import { Route as ProductsRouteImport } from './routes/products'
 
 const IndexRoute = IndexRouteImport.update({
@@ -47,6 +48,11 @@ const GalleryRoute = GalleryRouteImport.update({
   path: '/gallery',
   getParentRoute: () => rootRouteImport,
 } as any)
+const NetworkRoute = NetworkRouteImport.update({
+  id: '/network',
+  path: '/network',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProductsRoute = ProductsRouteImport.update({
   id: '/products',
   path: '/products',
@@ -60,6 +66,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/distributor': typeof DistributorRoute
   '/gallery': typeof GalleryRoute
+  '/network': typeof NetworkRoute
   '/products': typeof ProductsRoute
 }
 export interface FileRoutesByTo {
@@ -69,6 +76,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/distributor': typeof DistributorRoute
   '/gallery': typeof GalleryRoute
+  '/network': typeof NetworkRoute
   '/products': typeof ProductsRoute
 }
 export interface FileRoutesById {
@@ -79,6 +87,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/distributor': typeof DistributorRoute
   '/gallery': typeof GalleryRoute
+  '/network': typeof NetworkRoute
   '/products': typeof ProductsRoute
 }
 export interface FileRouteTypes {
@@ -90,6 +99,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/distributor'
     | '/gallery'
+    | '/network'
     | '/products'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -99,6 +109,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/distributor'
     | '/gallery'
+    | '/network'
     | '/products'
   id:
     | '__root__'
@@ -108,6 +119,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/distributor'
     | '/gallery'
+    | '/network'
     | '/products'
   fileRoutesById: FileRoutesById
 }
@@ -118,6 +130,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   DistributorRoute: typeof DistributorRoute
   GalleryRoute: typeof GalleryRoute
+  NetworkRoute: typeof NetworkRoute
   ProductsRoute: typeof ProductsRoute
 }
 
@@ -165,6 +178,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GalleryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/network': {
+      id: '/network'
+      path: '/network'
+      fullPath: '/network'
+      preLoaderRoute: typeof NetworkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/products': {
       id: '/products'
       path: '/products'
@@ -182,6 +202,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   DistributorRoute: DistributorRoute,
   GalleryRoute: GalleryRoute,
+  NetworkRoute: NetworkRoute,
   ProductsRoute: ProductsRoute,
 }
 export const routeTree = rootRouteImport

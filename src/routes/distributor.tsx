@@ -89,8 +89,8 @@ function DistributorPage() {
                 },
                 {
                   icon: Handshake,
-                  title: "Direct Owner Support",
-                  desc: "Direct coordination with M. Sah and our dedicated commercial distribution team.",
+                  title: "Direct Founder Coordination",
+                  desc: `Direct coordination with Founder ${site.owner} and commercial dispatch (+91 98326 53731 / +91 98004 92817).`,
                 },
               ].map((perk, i) => (
                 <Reveal key={perk.title} delay={i * 80}>

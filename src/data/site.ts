@@ -7,28 +7,43 @@ export const site = {
   company: "Sah Food Industries",
   brand: "City King",
   brandFull: "City King Spices",
-  owner: "M Sah",
+  owner: "Mukesh Kumar Sah",
+  founderTitle: "Founder & Owner of City King Company",
+  founderShort: "Mukesh kr Sah",
+  streetAddress: "Ektiasal Eastern Bypass Road",
   city: "Siliguri",
   district: "Darjeeling",
   state: "West Bengal",
   pincode: "734001",
   country: "India",
-  addressLine: "Siliguri, Darjeeling, West Bengal – 734001",
-  phoneDisplay: "+91 98004 92817",
-  phoneDial: "+919800492817",
-  whatsapp: "919800492817",
+  addressLine: "Ektiasal Eastern Bypass Road, Siliguri, Darjeeling – 734001, West Bengal",
+  fullAddress: "Sah Food Industries, Ektiasal Eastern Bypass Road, Siliguri, Darjeeling, Pin 734001, West Bengal",
+
+  // Phone numbers
+  phonePrimary: "+91 98326 53731",
+  phoneSecondary: "+91 98004 92817",
+  phoneDisplay: "+91 98326 53731 / +91 98004 92817",
+  phoneDialPrimary: "+919832653731",
+  phoneDialSecondary: "+919800492817",
+
+  // Backward-compatible aliases
+  phone: "+91 98326 53731",
+  phoneDial: "+919832653731",
+  whatsapp: "919832653731",
+  whatsappSecondary: "919800492817",
+
   tagline: "Laye Swad me Bahar",
   taglineHindi: "शुद्ध मसाले यानी सिटी किंग मसाले",
 
   email: null as string | null,
-  fullAddress: "Siliguri, Darjeeling, West Bengal – 734001",
   fssai: null as string | null,
   gstin: null as string | null,
   mapEmbedUrl: null as string | null,
   yearsInBusiness: null as string | null,
+
   social: {
-    facebook: null as string | null,
-    instagram: null as string | null,
+    instagram: "https://www.instagram.com/citykingfoodproducts",
+    facebook: "https://www.facebook.com/61586866477289/posts/122099686131228882/?substory_index=1416453786936211&rdid=cXSuocpcslRUdCbz#",
     youtube: null as string | null,
   },
 };
@@ -42,16 +57,21 @@ export const navLinks = [
   { label: "Contact", to: "/contact" },
 ] as const;
 
-export function waLink(message: string) {
-  return `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(message)}`;
+export function waLink(phoneOrMessage: string, maybeMessage?: string) {
+  if (maybeMessage) {
+    const cleanPhone = phoneOrMessage.replace(/\D/g, "");
+    return `https://wa.me/${cleanPhone}?text=${encodeURIComponent(maybeMessage)}`;
+  }
+  return `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(phoneOrMessage)}`;
 }
 
 export const waMessages = {
   general: `Hello Sah Food Industries, I would like to know more about City King Spices and your products.`,
+  generalEnquiry: `Hello Sah Food Industries, I would like to enquire about City King Spices products and prices.`,
   business: `Hello Sah Food Industries, I am interested in a business/distributor enquiry for City King Spices.`,
   product: (name: string) =>
     `Hello Sah Food Industries, I am interested in your ${name}. Please share product details.`,
 };
 
-export const telLink = `tel:${site.phoneDial}`;
-
+export const telLink = `tel:${site.phoneDialPrimary}`;
+export const telLink2 = `tel:${site.phoneDialSecondary}`;

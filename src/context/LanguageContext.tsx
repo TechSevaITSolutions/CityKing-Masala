@@ -14,6 +14,7 @@ export const translations: Record<Language, Record<string, string>> = {
     // Nav
     "nav.home": "Home",
     "nav.products": "Products",
+    "nav.network": "Service Network",
     "nav.brand": "Brand",
     "nav.about": "About Us",
     "nav.distributor": "Distributor",
@@ -56,7 +57,7 @@ export const translations: Record<Language, Record<string, string>> = {
 
     "story.tag": "THE CITY KING STORY",
     "story.title": "Pure Spices. Authentic Taste.",
-    "story.p1": "Sah Food Industries was established in Siliguri, Darjeeling (West Bengal – 734001) by M Sah with a clear vision: delivering clean, aromatic, and unadulterated spices for households that cherish authentic homemade meals.",
+    "story.p1": "Sah Food Industries was established at Ektiasal Eastern Bypass Road, Siliguri, Darjeeling (Pin 734001, West Bengal) by Founder Mukesh Kumar Sah (Mukesh kr Sah) with a clear vision: delivering clean, aromatic, and unadulterated spices for households that cherish authentic homemade meals.",
     "story.p2": "Every batch of City King spice is carefully ground to preserve its natural essential oils, vibrant natural colour, and inviting aroma that defines delicious everyday Indian dishes.",
     "story.readStory": "Read Full Story",
 
@@ -72,6 +73,7 @@ export const translations: Record<Language, Record<string, string>> = {
     // Nav
     "nav.home": "मुख्य पृष्ठ",
     "nav.products": "उत्पाद श्रृंखला",
+    "nav.network": "सेवा नेटवर्क",
     "nav.brand": "ब्रांड पहचान",
     "nav.about": "हमारे बारे में",
     "nav.distributor": "डीलरशिप",
@@ -114,7 +116,7 @@ export const translations: Record<Language, Record<string, string>> = {
 
     "story.tag": "सिटी किंग की कहानी",
     "story.title": "शुद्ध मसाले। असली स्वाद।",
-    "story.p1": "साह फूड इंडस्ट्रीज की स्थापना सिलीगुड़ी, दार्जिलिंग (पश्चिम बंगाल – 734001) में एम. साह द्वारा एक स्पष्ट संकल्प के साथ की गई: हर घर तक बिना किसी मिलावट के शुद्ध, ताज़ा और महकदार मसाले पहुंचाना।",
+    "story.p1": "साह फूड इंडस्ट्रीज की स्थापना एकतियासाल ईस्टर्न बाईपास रोड, सिलीगुड़ी, दार्जिलिंग (पिन 734001, पश्चिम बंगाल) में संस्थापक मुकेश कुमार साह (मुकेश कुमार साह) द्वारा एक स्पष्ट संकल्प के साथ की गई: हर घर तक बिना किसी मिलावट के शुद्ध, ताज़ा और महकदार मसाले पहुंचाना।",
     "story.p2": "सिटी किंग का हर बैच प्राकृतिक तेलों और मनभावन सुगंध को सुरक्षित रखकर तैयार किया जाता है, जो रोज़मर्रा के भोजन को स्वादिष्ट बनाता है।",
     "story.readStory": "पूरी कहानी पढ़ें",
 

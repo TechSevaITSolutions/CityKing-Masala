@@ -193,7 +193,7 @@ export function SmartOrderDrawer() {
               </a>
 
               <p className="text-[11px] text-center text-muted-foreground">
-                Opens directly in WhatsApp with {site.company} (+91 98004 92817)
+                Opens directly in WhatsApp with {site.company} ({site.phonePrimary})
               </p>
             </div>
           </div>

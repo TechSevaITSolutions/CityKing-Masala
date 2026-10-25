@@ -9,19 +9,24 @@ export function SeoStructuredData() {
     name: site.company,
     alternateName: ["City King", "City King Masala", "City King Spices", "Sah Food Industries Siliguri"],
     url: "https://citykingspices.in",
-    telephone: site.phone,
+    telephone: [site.phonePrimary, site.phoneSecondary],
     founder: {
       "@type": "Person",
       name: site.owner,
+      jobTitle: "Founder & Owner",
     },
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Siliguri",
-      addressLocality: "Siliguri",
-      addressRegion: "West Bengal",
-      postalCode: "734001",
+      streetAddress: site.streetAddress,
+      addressLocality: site.city,
+      addressRegion: site.state,
+      postalCode: site.pincode,
       addressCountry: "IN",
     },
+    sameAs: [
+      site.social.instagram,
+      site.social.facebook,
+    ].filter(Boolean),
     slogan: site.tagline,
   };
 
@@ -30,14 +35,14 @@ export function SeoStructuredData() {
     "@type": "FoodEstablishment",
     name: "Sah Food Industries - City King Spices",
     image: "https://citykingspices.in/assets/hero-spices.jpg",
-    telephone: site.phone,
+    telephone: [site.phonePrimary, site.phoneSecondary],
     priceRange: "₹₹",
     address: {
       "@type": "PostalAddress",
-      streetAddress: site.addressLine,
+      streetAddress: site.streetAddress,
       addressLocality: site.city,
       addressRegion: site.state,
-      postalCode: site.pin,
+      postalCode: site.pincode,
       addressCountry: "IN",
     },
     geo: {

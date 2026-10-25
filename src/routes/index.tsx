@@ -35,6 +35,7 @@ import { FaqSection } from "@/components/FaqSection";
 import { HeroProductShowcase } from "@/components/HeroProductShowcase";
 import { HeroBannerSlider } from "@/components/HeroBannerSlider";
 import { WhyChooseUsBannerSlider } from "@/components/WhyChooseUsBannerSlider";
+import { ServiceNetworkSection } from "@/components/ServiceNetworkSection";
 import { addToOrderBag } from "@/components/SmartOrderDrawer";
 
 // Image assets
@@ -199,9 +200,11 @@ function IndexPage() {
             <span>•</span>
             <span>शुद्ध मसाले यानी सिटी किंग मसाले</span>
             <span>•</span>
-            <span>Siliguri, Darjeeling (West Bengal – 734001)</span>
+            <span>Ektiasal Eastern Bypass Road, Siliguri, Darjeeling (734001)</span>
             <span>•</span>
-            <span>Owner: M Sah (+91 98004 92817)</span>
+            <span>Founder: Mukesh Kumar Sah (Mukesh kr Sah)</span>
+            <span>•</span>
+            <span>Ph: +91 98326 53731 / +91 98004 92817</span>
             <span>•</span>
             <span>Direct Wholesale & Dealership Enquiries</span>
             <span>•</span>
@@ -435,7 +438,12 @@ function IndexPage() {
         </section>
 
         {/* =========================================================================
-            5. REGIONAL TADKA & FLAVOR MATCHER (भारत का स्वाद)
+            5. OUR SERVICE NETWORK — WEST BENGAL & ENTIRE NORTH BIHAR (22 DISTRICTS)
+           ========================================================================= */}
+        <ServiceNetworkSection />
+
+        {/* =========================================================================
+            6. REGIONAL TADKA & FLAVOR MATCHER (भारत का स्वाद)
            ========================================================================= */}
         <RegionalTadkaMatcher />
 
@@ -583,13 +591,13 @@ function IndexPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-cocoa/90 via-transparent to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6 text-cocoa-foreground">
                     <span className="text-xs uppercase tracking-wider text-accent font-semibold">
-                      Siliguri, West Bengal
+                      Ektiasal Eastern Bypass Road, Siliguri
                     </span>
                     <h3 className="font-display text-2xl font-bold mt-1">
                       Sah Food Industries
                     </h3>
-                    <p className="text-xs text-cocoa-foreground/75 mt-1">
-                      Owner: {site.owner} • {site.addressLine}
+                    <p className="text-xs text-cocoa-foreground/85 mt-1">
+                      Founder: {site.owner} ({site.founderShort}) • Call: {site.phonePrimary} / {site.phoneSecondary}
                     </p>
                   </div>
                 </div>
